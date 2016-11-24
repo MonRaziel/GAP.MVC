@@ -1,0 +1,5 @@
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDTO\bin\Debug\InventarioDTO.dll
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDTO\bin\Debug\InventarioDTO.pdb
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDTO\obj\Debug\InventarioDTO.csprojResolveAssemblyReference.cache
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDTO\obj\Debug\InventarioDTO.dll
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDTO\obj\Debug\InventarioDTO.pdb

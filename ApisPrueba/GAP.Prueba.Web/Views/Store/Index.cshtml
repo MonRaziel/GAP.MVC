@@ -1,0 +1,74 @@
+﻿@model IEnumerable<InventarioDTO.Store>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Stores</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        @*<th>
+                @Html.DisplayNameFor(model => model.Store_Id)
+            </th>*@
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            @*<td>
+                    @Html.DisplayFor(modelItem => item.Store_Id)
+                </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Store_Id }) |
+                <a href="" onclick="deleteStore(@item.Store_Id);">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script>
+    function deleteStore(id) {
+        if (confirm("Are you sure?")) {
+            try {
+                $.ajax(
+                    {
+                        url: "http://localhost/ApisPrueba/services/stores/" + id,
+                        type: "DELETE",
+                        contentType: "application/json",
+                        //dataType: 'json',
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("Authorization",
+                                "Basic bXlfdXNlcjpteV9wYXNzd29yZA==");
+                        },
+                        error: function (jqXHR) {
+                            alert("Failed deleting Store, validate related articles");
+                        }
+                    }
+                    )
+
+            } catch (e) {
+                alert(e.message);
+            }
+
+        }
+    }
+</script>

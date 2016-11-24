@@ -1,0 +1,66 @@
+﻿@model IEnumerable<InventarioDTO.Article>
+
+@{
+    ViewBag.Title = "View";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Articles</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Descripción</th>
+        <th>Price</th>
+        <th>Store Name</th>
+        <th>Total Shelf</th>
+        <th>Total Vault</th>
+        <th>Actions</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Description</td>
+            <td>@item.Price</td>
+            <td>@item.Store_name</td>
+            <td>@item.Total_in_shelf</td>
+            <td>@item.Total_in_vault</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Article_Id }) |
+                <a href="" onclick="deleteArticle(@item.Article_Id);">Delete</a>
+            </td>
+        </tr>
+    }
+
+</table>
+
+<script>
+    function deleteArticle(id) {
+        if (confirm("Are you sure?")) {
+            try {
+                $.ajax(
+                    {
+                        url: "http://localhost/ApisPrueba/services/articles/" + id,
+                        type: "DELETE",
+                        contentType: "application/json",
+                        //dataType: 'json',
+                        beforeSend: function (xhr) {
+                            xhr.setRequestHeader("Authorization",
+                                "Basic bXlfdXNlcjpteV9wYXNzd29yZA==");
+                        },
+                        error: function (jqXHR) {
+                            alert("Error deleting Article");
+                        }
+                    }
+                    )
+
+            } catch (e) {
+                alert(e.message);
+            }
+
+        }
+    }
+</script>

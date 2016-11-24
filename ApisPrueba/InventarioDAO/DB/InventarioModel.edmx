@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PruebaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <Function Name="usp_CreateArticle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Description" Type="varchar" Mode="In" />
+          <Parameter Name="Price" Type="numeric" Mode="In" />
+          <Parameter Name="Total_in_shelf" Type="numeric" Mode="In" />
+          <Parameter Name="Total_in_vault" Type="numeric" Mode="In" />
+          <Parameter Name="Store_Id" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="usp_CreateStore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="Address" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="usp_DeleteArticle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Article_Id" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="usp_DeleteStore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Store_Id" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="usp_ReadArticles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Article_Id" Type="numeric" Mode="In" />
+          <Parameter Name="Store_Id" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="usp_ReadStore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Store_Id" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="usp_UpdateArticle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Article_Id" Type="numeric" Mode="In" />
+          <Parameter Name="Description" Type="varchar" Mode="In" />
+          <Parameter Name="Price" Type="numeric" Mode="In" />
+          <Parameter Name="Total_in_shelf" Type="numeric" Mode="In" />
+          <Parameter Name="Total_in_vault" Type="numeric" Mode="In" />
+          <Parameter Name="Store_Id" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="usp_UpdateStore" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Store_Id" Type="numeric" Mode="In" />
+          <Parameter Name="Name" Type="varchar" Mode="In" />
+          <Parameter Name="Address" Type="varchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="PruebaModelStoreContainer" />
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PruebaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PruebaEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="usp_CreateArticle">
+            <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="Price" Mode="In" Type="Decimal" />
+            <Parameter Name="Total_in_shelf" Mode="In" Type="Decimal" />
+            <Parameter Name="Total_in_vault" Mode="In" Type="Decimal" />
+            <Parameter Name="Store_Id" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_CreateStore">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Address" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_DeleteArticle">
+          <Parameter Name="Article_Id" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_DeleteStore">
+          <Parameter Name="Store_Id" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ReadStore" ReturnType="Collection(PruebaModel.usp_ReadStore_Result)">
+          <Parameter Name="Store_Id" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_UpdateArticle">
+            <Parameter Name="Article_Id" Mode="In" Type="Decimal" />
+            <Parameter Name="Description" Mode="In" Type="String" />
+            <Parameter Name="Price" Mode="In" Type="Decimal" />
+            <Parameter Name="Total_in_shelf" Mode="In" Type="Decimal" />
+            <Parameter Name="Total_in_vault" Mode="In" Type="Decimal" />
+            <Parameter Name="Store_Id" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="usp_UpdateStore">
+            <Parameter Name="Store_Id" Mode="In" Type="Decimal" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Address" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="usp_ReadArticles" ReturnType="Collection(PruebaModel.usp_ReadArticles_Result)">
+            <Parameter Name="Article_Id" Mode="In" Type="Decimal" />
+            <Parameter Name="Store_Id" Mode="In" Type="Decimal" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="usp_ReadArticlesStore_Result">
+          <Property Type="Decimal" Name="Store_Id" Nullable="false" Precision="20" Scale="0" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="255" />
+          <Property Type="Decimal" Name="Article_Id" Nullable="false" Precision="20" Scale="0" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="255" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="22" Scale="2" />
+          <Property Type="Decimal" Name="Total_in_shelf" Nullable="true" Precision="20" Scale="0" />
+          <Property Type="Decimal" Name="Total_in_vault" Nullable="true" Precision="20" Scale="0" />
+          <Property Type="Decimal" Name="Store_Id1" Nullable="true" Precision="20" Scale="0" />
+        </ComplexType>
+        <ComplexType Name="usp_ReadStore_Result">
+          <Property Type="Decimal" Name="Store_Id" Nullable="false" Precision="20" Scale="0" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="Address" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <ComplexType Name="usp_ReadArticles_Result">
+          <Property Type="Decimal" Name="Article_Id" Nullable="false" Precision="20" Scale="0" />
+          <Property Type="String" Name="Description" Nullable="true" MaxLength="255" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="22" Scale="2" />
+          <Property Type="Decimal" Name="Total_in_shelf" Nullable="true" Precision="20" Scale="0" />
+          <Property Type="Decimal" Name="Total_in_vault" Nullable="true" Precision="20" Scale="0" />
+          <Property Type="Decimal" Name="Store_Id" Nullable="true" Precision="20" Scale="0" />
+          <Property Type="String" Name="NameStore" Nullable="true" MaxLength="255" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PruebaModelStoreContainer" CdmEntityContainer="PruebaEntities" >
+          <FunctionImportMapping FunctionImportName="usp_CreateArticle" FunctionName="PruebaModel.Store.usp_CreateArticle" />
+          <FunctionImportMapping FunctionImportName="usp_CreateStore" FunctionName="PruebaModel.Store.usp_CreateStore" />
+          <FunctionImportMapping FunctionImportName="usp_DeleteArticle" FunctionName="PruebaModel.Store.usp_DeleteArticle" />
+          <FunctionImportMapping FunctionImportName="usp_DeleteStore" FunctionName="PruebaModel.Store.usp_DeleteStore" />
+          <FunctionImportMapping FunctionImportName="usp_ReadStore" FunctionName="PruebaModel.Store.usp_ReadStore">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PruebaModel.usp_ReadStore_Result">
+                <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="usp_UpdateArticle" FunctionName="PruebaModel.Store.usp_UpdateArticle" />
+          <FunctionImportMapping FunctionImportName="usp_UpdateStore" FunctionName="PruebaModel.Store.usp_UpdateStore" />
+          <FunctionImportMapping FunctionImportName="usp_ReadArticles" FunctionName="PruebaModel.Store.usp_ReadArticles">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="PruebaModel.usp_ReadArticles_Result">
+                <ScalarProperty Name="Article_Id" ColumnName="Article_Id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Total_in_shelf" ColumnName="Total_in_shelf" />
+                <ScalarProperty Name="Total_in_vault" ColumnName="Total_in_vault" />
+                <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+                <ScalarProperty Name="NameStore" ColumnName="NameStore" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

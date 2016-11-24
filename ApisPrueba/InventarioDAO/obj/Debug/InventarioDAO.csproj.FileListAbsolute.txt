@@ -1,0 +1,12 @@
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\InventarioDAO.dll.config
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\InventarioDAO.dll
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\InventarioDAO.pdb
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\EntityFramework.dll
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\EntityFramework.SqlServer.dll
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\InventarioDTO.dll
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\InventarioDTO.pdb
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\EntityFramework.xml
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\bin\Debug\EntityFramework.SqlServer.xml
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\obj\Debug\InventarioDAO.csprojResolveAssemblyReference.cache
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\obj\Debug\InventarioDAO.dll
+D:\Asus WebStorage\Personal\Entrevistas\GAP\ApisPrueba\InventarioDAO\obj\Debug\InventarioDAO.pdb

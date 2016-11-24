@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApisPrueba", "ApisPrueba\ApisPrueba.csproj", "{494241BA-E691-4027-8D55-D30F62AC5C52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventarioDAO", "InventarioDAO\InventarioDAO.csproj", "{DFB948DC-D36D-4CCE-B66F-E81D40F6EC46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InventarioDTO", "InventarioDTO\InventarioDTO.csproj", "{712E005D-A02D-4FAC-9432-D55ED965AA3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GAP.Prueba.Web", "GAP.Prueba.Web\GAP.Prueba.Web.csproj", "{BC57F467-9B5D-45F3-A7D8-CF99CEF1C390}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{494241BA-E691-4027-8D55-D30F62AC5C52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{494241BA-E691-4027-8D55-D30F62AC5C52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{494241BA-E691-4027-8D55-D30F62AC5C52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{494241BA-E691-4027-8D55-D30F62AC5C52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFB948DC-D36D-4CCE-B66F-E81D40F6EC46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFB948DC-D36D-4CCE-B66F-E81D40F6EC46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFB948DC-D36D-4CCE-B66F-E81D40F6EC46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFB948DC-D36D-4CCE-B66F-E81D40F6EC46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{712E005D-A02D-4FAC-9432-D55ED965AA3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{712E005D-A02D-4FAC-9432-D55ED965AA3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{712E005D-A02D-4FAC-9432-D55ED965AA3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{712E005D-A02D-4FAC-9432-D55ED965AA3B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC57F467-9B5D-45F3-A7D8-CF99CEF1C390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC57F467-9B5D-45F3-A7D8-CF99CEF1C390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC57F467-9B5D-45F3-A7D8-CF99CEF1C390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC57F467-9B5D-45F3-A7D8-CF99CEF1C390}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

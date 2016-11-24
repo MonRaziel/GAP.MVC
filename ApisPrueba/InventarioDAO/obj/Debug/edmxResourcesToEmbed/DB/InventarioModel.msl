@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PruebaModelStoreContainer" CdmEntityContainer="PruebaEntities">
+    <FunctionImportMapping FunctionImportName="usp_CreateArticle" FunctionName="PruebaModel.Store.usp_CreateArticle" />
+    <FunctionImportMapping FunctionImportName="usp_CreateStore" FunctionName="PruebaModel.Store.usp_CreateStore" />
+    <FunctionImportMapping FunctionImportName="usp_DeleteArticle" FunctionName="PruebaModel.Store.usp_DeleteArticle" />
+    <FunctionImportMapping FunctionImportName="usp_DeleteStore" FunctionName="PruebaModel.Store.usp_DeleteStore" />
+    <FunctionImportMapping FunctionImportName="usp_ReadStore" FunctionName="PruebaModel.Store.usp_ReadStore">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebaModel.usp_ReadStore_Result">
+          <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="usp_UpdateArticle" FunctionName="PruebaModel.Store.usp_UpdateArticle" />
+    <FunctionImportMapping FunctionImportName="usp_UpdateStore" FunctionName="PruebaModel.Store.usp_UpdateStore" />
+    <FunctionImportMapping FunctionImportName="usp_ReadArticles" FunctionName="PruebaModel.Store.usp_ReadArticles">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="PruebaModel.usp_ReadArticles_Result">
+          <ScalarProperty Name="Article_Id" ColumnName="Article_Id" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Total_in_shelf" ColumnName="Total_in_shelf" />
+          <ScalarProperty Name="Total_in_vault" ColumnName="Total_in_vault" />
+          <ScalarProperty Name="Store_Id" ColumnName="Store_Id" />
+          <ScalarProperty Name="NameStore" ColumnName="NameStore" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>
