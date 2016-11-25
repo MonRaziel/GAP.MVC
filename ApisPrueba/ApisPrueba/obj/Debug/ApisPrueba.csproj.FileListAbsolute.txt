@@ -183,5 +183,6 @@ D:\Desarrollo\Github\GAP.MVC\ApisPrueba\ApisPrueba\bin\Microsoft.Owin.Security.G
 D:\Desarrollo\Github\GAP.MVC\ApisPrueba\ApisPrueba\bin\Microsoft.Owin.Security.Twitter.xml
 D:\Desarrollo\Github\GAP.MVC\ApisPrueba\ApisPrueba\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\Desarrollo\Github\GAP.MVC\ApisPrueba\ApisPrueba\bin\System.Web.Http.Owin.xml
+D:\Desarrollo\Github\GAP.MVC\ApisPrueba\ApisPrueba\obj\Debug\ApisPrueba.csprojResolveAssemblyReference.cache
 D:\Desarrollo\Github\GAP.MVC\ApisPrueba\ApisPrueba\obj\Debug\ApisPrueba.dll
 D:\Desarrollo\Github\GAP.MVC\ApisPrueba\ApisPrueba\obj\Debug\ApisPrueba.pdb

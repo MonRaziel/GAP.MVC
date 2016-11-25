@@ -12,9 +12,15 @@ namespace ApisPrueba.Attributes
         /// <param name="context"></param>
         public override void OnException(HttpActionExecutedContext context)
         {
+
+            string innerExp = string.Empty;
+            if (context.Exception.InnerException != null)
+            {
+                innerExp = context.Exception.InnerException.Message;
+            }
             var excepcion = new HttpResponseMessage(HttpStatusCode.InternalServerError)
             {
-                Content = new StringContent(context.Exception.StackTrace),
+                Content = new StringContent(string.Format("{0} - {1}", context.Exception.StackTrace, innerExp)),
                 ReasonPhrase = context.Exception.Message
             };
 
